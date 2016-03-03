@@ -1,0 +1,501 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Marshall Experience - Case Study</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link href="styles/casestudy_FluidGrid.css" rel="stylesheet" type="text/css">
+<link href="styles/casestudy_Boilerplate.css" rel="stylesheet" type="text/css">
+
+<!-- Load Amimate.css -->
+<link rel="stylesheet" href="styles/animate.css"> 
+
+<!-- Load fancyBox and helpers -->
+<link rel="stylesheet" type="text/css" href="fancyBox/source/jquery.fancybox.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="fancyBox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5"  media="screen" />
+<link rel="stylesheet" type="text/css" href="fancyBox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  media="screen" />
+
+
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script src="Scripts/respond.min.js"></script>
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+
+<script src="http://use.edgefonts.net/alfa-slab-one:n4:default;iceberg:n4:default;iceland:n4:default;lilita-one:n4:default;orbitron:n3:default;play:n4:default;poller-one:n4:default;viga:n4:default;volkhov:n4:default.js" type="text/javascript">
+</script>
+
+
+<!-- Load JQuery Library -->
+<script src="scripts/jquery-2.1.4.min.js"></script>
+
+<!-- Load jquery.tosrus.min.all.js -->
+<script type="text/javascript" src="path/to/jquery.tosrus.min.all.js"></script>
+
+<!-- Load Hammer.js (for touch support) -->
+<script type="text/javascript" src="path/to/hammer.js"></script>
+
+<!-- Load JQuery.ZebraPin -->
+<script src="Zebra_Pin/public/javascript/zebra_pin.js"></script>
+
+<!-- Load jQuery.scrollSpeed -->
+<script src="SmoothMouseScrolling/jQuery.scrollSpeed.js"></script>
+
+<!-- Load FancyBox.js -->
+<script src="fancyBox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ 
+ <!-- Load FancyBox helpers -->
+<script src="fancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script src="fancyBox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<script src="fancyBox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+ 
+<!-- Load WOW js -->
+<script src="WOW/dist/wow.min.js"></script>
+
+<!-- Load Animate.js -->
+<script src="animatescroll/animatescroll.js"></script>
+
+<!-- Initialize Wow.js -->
+<script> new WOW().init(); </script>
+
+
+<!-- JavaScript Function to Fade in the page after loading-->
+<script>
+		$(document).ready(function() {
+		  $('body').css('display', 'none');
+		  $('body').fadeIn(600);
+		  $('.link').click(function(event) {
+			event.preventDefault();
+			newLocation = $('.link a').attr("href");
+			$('body').fadeOut(600, newpage);
+		  });
+		  function newpage() {
+			window.location = newLocation;
+		  }
+		});	
+</script>
+
+<!-- Load fancyBox -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".image-show").fancybox({
+			fitToView	: true,
+			width		: '80%',
+			height		: '80%',
+			autoSize	: false,
+			closeClick	: false,
+			openEffect	: 'none',
+			closeEffect	: 'none',
+			nextEffect	: 'none',
+			prevEffect	: 'none',
+			
+			helpers : {
+				title: { type: 'outside'},
+				buttons	: {},
+				thumbs	: {
+					width	: 50,
+					height	: 50
+			}			
+			}
+		});
+		
+		$('.open-album').click(function(e) {
+    		var el, id = $(this).data('open-id');
+   			 if(id){
+        		el = $('.image-show[rel=' + id + ']:eq(0)');
+        		e.preventDefault();
+       			el.click();
+    		}
+		});
+		
+
+			
+	});
+</script>
+
+
+
+<!-- Load Smoothwheel
+<script>
+$(function() {  
+	jQuery.scrollSpeed(100, 800);
+});
+</script>  -->
+
+
+<!-- Zebra Sticky Banner
+<script type="text/javascript">
+$(document).ready(function() {
+	var
+	 
+		pin = new $.Zebra_Pin($('.Zebra'), {
+			top_spacing: 50,
+			contain: true
+		})
+});
+</script> -->
+
+</head>
+<body>
+<!-- -->
+
+ <!-- .gridcontainer holds the entire page-->          
+<div class="gridContainer P_L1">
+
+	<!-- Navigation for Each Page -->
+	<div id="TopBanner" class="fluid animate fadeInDown one">
+    		<div id="Navigation" class="fluid animate fadeInDown one">
+                <div id="Center">
+                    <a href="portfolio.html"><span class="RedText">Portfolio</span></a> 
+                
+                    <a href="default.html">
+                        <div id="LogoContainer">
+                            <div id="RedLogo"><img src="photos/Portfolio_Page/JM_PenTool_Circle.png" alt="" width="70"></div>
+                            <div id="BlueLogo"><img src="photos/Portfolio_Page/JM_PenTool_Circle-Blue.png" alt="" width="70"></div>
+                        </div>
+                    </a>
+                                                                                            
+                    <a href="contact.html">Contact</a>
+                </div>
+        	</div>
+    </div>
+    
+    
+    
+<!-- Introductory banner. -->
+	<div id="S1-IntroBanner">
+        <div id="S1-Spacer1"></div>
+        <div id="BannerTitle">The Marshall Experience</div>
+        <div id="Subtitle" style="" >A case study on the development of this site.</div>
+    </div>
+      
+<!-- Background -->
+	<div class="Section_Banner">
+        <h1 class="wow fadeIn">Background</h1> 
+        <p class="wow fadeIn">Project details.</p>
+        <p style="" class="wow fadeIn">&#8212 The Marshall Experience &#8212 </p>
+		</div>
+					<!--<div class="CenteringBox"></div>-->
+
+
+		<!-- Background - Container For content in Background -->
+        <div class="Section_Content" style="background-color:#F1F1BF">
+
+            	<!-- Background - Centered Content -->
+                <div class="Content_L wow fadeIn" style="max-width:600px; width:100%; margin:0;">
+                
+                	<div style="padding:5%">
+                        <h2 style="text-align:center; margin-bottom:-22px;">My Approach</h2>
+                        <p style="margin-bottom:50px;">To design my portfolio site, I used a design process that is broken down into five phases; Strategy, Scope, Structure, Skeleton, and Surface. Each of the phases are outlined below.</p>
+                        
+                        <h2 style="text-align:center; margin-bottom:-50px;">Tools and Techniques</h2>
+                        <p  style="margin-bottom:50px;"><strong></strong><br>For this project, I used personas, user flows, and wireframes as I molded my ideas. Then I used Adobe Dreamweaver to code the website using HTML, CSS, and JavaScript.</p>
+                        
+                        <h2 style="text-align:center;  margin-bottom:-50px;">Inspiration</h2>
+                        <p style="margin-bottom:50px;"><strong></strong><br> My main inspiration for this project was <a href="http://www.sanel.us/" target="_blank">Sanel Selimovic's</a> personal page as well as the <a href="https://fabriceleven.com/" target="_blank">FabricEleven</a> site. I greatly admired their use of flat design and color for the visual appearance their sites.</p>
+               		</div>
+                
+            </div>
+            
+      </div>
+    
+    
+<!-- Phase I: Strategy -->
+	<div class="Section_Banner">
+        <h1  class="wow fadeIn">Phase I: Strategy</h1> 
+        <p  class="wow fadeIn">Product objectives and user needs.</p>
+        <p class="wow fadeIn">&#8212 The Marshall Experience &#8212 </p>
+		</div>
+   
+    	<!-- Phase I: Strategy - Container for content in Strategy -->    
+		<div class="Section_Content">
+        
+        	<!-- Phase I: Strategy - Left-aligned content -->
+            <div class="Content_L">
+            
+                <div class="wow fadeIn">
+               		<!-- Phase I: Strategy - Picture and button -->
+                    <div style="width:100%;">
+                    
+                        <a class="image-show" rel="StrategyGallery" href="photos/tme/TME_Persona1.jpg" title="Persona for TheMarshallExperience.org portfolio site (image 1/2)."><img class="wow fadeIn ImageSize" src="photos/tme/personas.png" alt="" width="100%"></a>
+                        <a class="image-show" rel="StrategyGallery" href="photos/tme/TME_Persona2.jpg" title="Persona for TheMarshallExperience.org portfolio site (image 2/2)." style="display:none;"></a>
+                        
+                    </div>
+                    
+                    <a class="open-album" data-open-id="StrategyGallery">
+                    <div class="wow fadeIn" style=" width:100%; display:flex; align-items:center; justify-content:center;">
+                        <div class="wow zoomIn ButtonBuffer" style="
+                            margin-top:30px;
+                            width:250px; 
+                            height:50px; 
+                            border-radius:1px; 
+                            border-style:solid; 
+                            border-color:#559BC5;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;"><h3>View Personas</h3></div>
+                    </div>
+                    </a>
+                    
+                </div>
+             </div>
+             
+			<!-- Phase: I Strategy - Right-aligned content -->
+    		<div class="Content_R" style="">
+            
+            	<div class="wow fadeIn"  style="width:90%;">
+                    <h2 class="wow fadeIn" style="margin-bottom:-20px;">Product Objectives</h2>
+                    <p class="wow fadeIn" style="">The purpose of having a portfolio site was to:</p>
+                        <li class="wow fadeIn" style="margin-top:-20px;">Display/explain design work, design skills, and relevant experience.</li>
+                        <li class="wow fadeIn" style="">Provide users with ways to contact me directly.</li>
+                        
+                    <h2 class="wow fadeIn" style="margin-bottom:-20px; margin-top:20px;">User Needs</h2>    
+                    <p class="wow fadeIn" style="margin-bottom:105px;">To help anticipate user needs, I created a couple of personas using Adobe Illustrator. These personas acted as realistic representations of fictional users that would potentially visit the site and helped me consider how to cater my design for potential users. </p>
+               </div>
+              
+            </div>
+            
+ 
+            
+        </div>
+    
+<!-- Phase II: Scope -->
+	<div class="Section_Banner">
+        <h1  class="wow fadeIn">Phase II: Scope</h1> 
+        <p  class="wow fadeIn"> Meeting needs and objectives.</p>
+        <p class="wow fadeIn">&#8212 The Marshall Experience &#8212 </p>
+	</div>
+
+	<!-- Phase II: Scope - Container for content -->
+	<div class="Section_Content"  style="background-color:#F2F1C2;">
+    
+    	<!-- Phase II: Scope - Centered Content -->
+    	<div class="Content_L" style="max-width:600px; padding:5%" >
+        
+        <h2 class="wow fadeIn" style="text-align:center; margin-top:100px;">Summary</h2>
+        <p class="wow fadeIn" style="margin-top:-20px;">In this phase of the design process, I like to focus on the the tasks that the product will perform (function specifications) and requirements of the content held by the product.</p>
+        
+        <h2 class="wow fadeIn" style="text-align:center;">Function Specifications</h2>
+        <p  class="wow fadeIn" style="margin-top:-20px;">The portfolio site will (1) send emails to me on behalf of site visitors via a contact page and (2) have files available for download, including my resume and some portfolio elements.</p>
+        
+        <h2 class="wow fadeIn" style="text-align:center; margin-bottom:-20px;">Content Requirements</h2>    
+        	<p class="wow fadeIn" style="margin-bottom:-10px; margin-top:30px"><strong><em>Text.</em></strong> Short descriptions (50-100 words per description) will be used to reduce information overload for the user.</p>
+       	 	<p class="wow fadeIn" style="margin-top:20px;"><strong><em>Images.</em></strong> Images would be viewable on the site in a gallery. For downloadable images, small file sizes (2MB max) will be used.</p>
+        	<p class="wow fadeIn" style="margin-top:0px;"><strong><em>Videos.</em></strong> Videos will be hosted on youtube, but playable on the portfolio site in a video gallery.</p>
+        	<p class="wow fadeIn" style="margin-top:0px; margin-bottom:100px;"><strong><em>Standalone Content.</em></strong> For downloadable files (portfolio, resume) will also have small file sizes (&#8804;200Kb).</p>
+        </div>
+    	
+	</div>
+      
+<!-- Phase III: Structure -->
+	<div class="Section_Banner">
+        <h1  class="wow fadeIn">Phase III: Scructure</h1> 
+        <p class="wow fadeIn">User interaction and navigation.</p>
+        <p class="wow fadeIn">&#8212 The Marshall Experience &#8212 </p>
+		</div>
+        
+    <!-- Phase III: Structure - Container for Content -->
+	<div id="StructureContainer" class="Section_Content">
+    
+		<!-- Phase III: Structure - Left-Aligned Content -->
+    	<div id="StructureBox1" class="Content_L wow">
+        
+        	<div style="width:90%; margin-left:5%; margin-right:10%;"> 
+                <h2 class="wow fadeIn" style="margin-bottom:-20px; margin-top:100px;">Summary</h2>
+                <p class="wow fadeIn" style="margin-bottom:50px;">In the Structure Phase, my main focus is interaction design (how the product and the user interact) and information architecture (how the content is organized).</p>
+                
+                <h2 class="wow fadeIn" style="margin-bottom:-20px">Interaction Design</h2>
+                <p class="wow fadeIn" >Here, my starting was to consider using signifiers which provide the user with intuitive cues on what the system will do and how the system will respond. Here's some examples of signifiers that I've included in the design of my portfolio site:</p>
+                
+                <li class="wow fadeIn" >An arrow on the first page indicating the location of more information.</li>
+                <li class="wow fadeIn" >A play icon ontop of images representing playable videos.</li>
+                <li class="wow fadeIn" >Light shadows indicating depth for clickable items.</li>
+                <li class="wow fadeIn" >Red highlighting on the navigation indicating the user's current location.</li>
+                
+                <p class="wow fadeIn" style="margin-bottom:50px">In addition to signifiers, there are many other interaction design elements to consider including error handling, discoverability, feedback, etc.</p>
+            
+                <h2 class="wow fadeIn" style="margin-bottom:-20px">Information Architecture</h2>
+                <p class="wow fadeIn" style="margin-bottom:100px;">For this project, I decided to use a hierarchical structure to organize pages and information. To illustrate how a user would navigate my site, I created a user flow.</p>
+            </div>
+            
+        </div>
+        
+        <!-- Phase III: Structure - Right-Aligned Content -->
+    	<div id="StructureBox2" class="Content_R" style="display:flex; align-items:center; flex-wrap:flex;">
+        
+        	<!-- Phase III: Structure - Picture and button -->
+        	<div>
+                <div style="width:100%;">
+                
+                <a class="image-show" rel="StructureGallery" href="photos/tme/TME_UserFlow.jpg" title="User Flow for TheMarshallExperience.org portfolio site."><img id="StructureImg" class="wow fadeIn ImageSize" src="photos/tme/structure.png" alt="" width="100%"></a>
+                
+                </div>
+                
+                <a class="open-album" data-open-id="StructureGallery">
+                <div style="width:100%; display:flex; align-items:center; justify-content:center;">
+                    <div class="wow zoomIn" style="
+                        margin-top:30px;
+                        width:250px; 
+                        height:50px; 
+                        border-radius:1px; 
+                        border-style:solid; 
+                        border-color:#559BC5;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;"><h3>View User Flow</h3></div>
+                </div>
+                </a>
+           </div>
+        </div>
+	</div>
+
+<!-- Phase IV: Skeleton -->
+
+	<div class="Section_Banner">
+    	
+        <h1 class="wow fadeIn">Phase IV: Skeleton</h1> 
+        <p class="wow fadeIn">Preliminary designs.</p>
+        <p class="wow fadeIn">&#8212 The Marshall Experience &#8212 </p>
+        
+	</div>
+    
+    <!-- Phase IV: Skeleton - Left-aligned Content-->
+    <div class="Section_Content"  style="background-color:#F2F1C2">
+    
+    		<!-- Phase IV: Skeleton - Picture Button -->
+
+            <div class="Content_L wow fadeIn" style="display:flex; flex-wrap:flex;">
+            <div>
+                <div style="width:100%;">
+                
+                
+				<a class="various fancybox image-show" rel="SkeletonGallery" href="photos/tme/TME_Wireframe1.jpg" title="Wireframe for TheMarshallExperience.org home page (image 1/7)."><img class="wow fadeIn ImageSize" src="photos/tme/skeleton.png" alt="" width="100%"></a>
+                <a class="image-show" rel="SkeletonGallery" href="photos/tme/TME_Wireframe2.jpg" title="Wireframe for TheMarshallExperience.org. home page (image 2/7)." style="display:none;"></a>
+                <a class="image-show" rel="SkeletonGallery" href="photos/tme/TME_Wireframe3.jpg" title="Wireframe for TheMarshallExperience.org. home page (image 3/7)." style="display:none;"></a>
+                <a class="image-show" rel="SkeletonGallery" href="photos/tme/TME_Wireframe4.jpg" title="Wireframe for TheMarshallExperience.org portfolio page (image 4/7)." style="display:none;"></a>
+                <a class="image-show" rel="SkeletonGallery" href="photos/tme/TME_Wireframe5.jpg" title="Wireframe for TheMarshallExperience.org portfolio project page (image 5/7)."  style="display:none;"></a>
+                <a class="image-show" rel="SkeletonGallery" href="photos/tme/TME_Wireframe6.jpg" title="Wireframe for TheMarshallExperience.org portfolio project page (image 6/7)." style="display:none;"></a>
+                <a class="image-show" rel="SkeletonGallery" href="photos/tme/TME_Wireframe7.jpg" title="Wireframe for TheMarshallExperience.org contact page (image 7/7)." style="display:none;"></a>
+                
+                </div>
+                
+                <a class="open-album" data-open-id="SkeletonGallery"> 
+                    <div style="width:100%; display:flex; align-items:center; justify-content:center;">
+                        <div class="wow zoomIn ButtonBuffer" style="
+                            margin-top:30px;
+                            width:250px; 
+                            height:50px; 
+                            border-radius:1px; 
+                            border-style:solid; 
+                            border-color:#559BC5;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;"><h3>View Wireframes</h3></div>
+                    </div>
+                </a>
+            </div>
+            </div>
+
+            <div class="Content_R" style="">
+            
+                <div style="width:90%;">
+                    <h2 class="wow fadeIn" style="margin-bottom:-20px;">Summary</h2>
+                    <p class="wow fadeIn" style="margin-bottom:105px;">In this phase, I used my user flow and personas to guide me while creating my wireframes for my website. By using wireframes, I was able to create a sort of skeleton upon which more detailed elements can be placed later on.</p>
+                </div>
+            
+            
+            
+            </div>
+        </div>
+	 
+<!-- Phase V: Surface -->
+	<div class="Section_Banner">
+        <h1 class="wow fadeIn">Phase V: Surface</h1> 
+        <p class="wow fadeIn">Visual design and UI elements.</p>
+        <p class="wow fadeIn">&#8212 The Marshall Experience &#8212 </p>
+	</div>
+    
+    <!-- Phase V: Surface - Container for Content-->
+  <div id="SurfaceContainer" class="Section_Content">
+    
+   			<!-- Phase V: Surface - Left-aligned content-->
+            <div id="SurfaceBox1" class="Content_L">
+                <div style="width:90%; margin-left:5%">
+                    <h2 class="wow fadeIn">Summary</h2>
+                    <p class="wow fadeIn" style="margin-top:-20px;">The Surface Phase is where I build ontop of the wireframes and user flows that I built in the earlier phases, while applying the design considerations that I encountered.</p> <br>
+                    <h2 class="wow fadeIn" >Building The Marshall Experience</h2>
+                    <p class="wow fadeIn" style="margin-top:-20px; margin-bottom:105px;">The thumbnails and images for the site were created from stetches that were brought to life in Adobe Illustrator. To build the site itself, I used Adobe Dreamweaver to write HTML, CSS, and JavaScript code.</p>
+                </div>
+                
+            </div>
+            
+            <!-- Phase V: Surface - Right-aligned content-->
+            <div id="SurfaceBox2" class="Content_R" style="display:flex; flex-wrap:flex; align-items:center; justify-content:center;">
+                
+                <!-- Phase V: Surface - Picture and Button-->
+                <div>
+                	<div style="width:100%;"><img class="wow fadeIn ImageSize" src="photos/tme/FinalScreens.png" alt="" width="100%"></div>
+                    <div style="width:100%; display:flex; align-items:center; justify-content:center; margin:0px;">
+                       <!-- <div class="wow fadeIn" style="
+                            margin-top:30px;
+                            width:250px; 
+                            height:50px; 
+                            border-radius:1px; 
+                            border-style:solid; 
+                            border-color:#559BC5;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;"><h3>View Materials</h3></div> -->
+                    </div>
+           	 </div>
+            </div>
+        </div>   
+
+        <div style="background-color:#F2F1C2; height:200px; width:100%; display:flex; align-items:center; justify-content:center; flex-wrap:wrap;">
+                    <h3 class="animate wow fadeIn" style="width:100%; text-align:center; margin-bottom:-50px">Visit my portfolio to view other projects.</h3>
+                    <a href="portfolio.html" style="color:#559BC5">
+                    <div class="wow zoomIn" style="
+                        height:50px; 
+                        width:100px; 
+                        border-radius:1px; 
+                        border-color:#559BC5; 
+                        border-style:solid;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                        font-weight:bold;"><h3>Portfolio</h3></div>
+                     </a>
+                
+                </div>
+
+<!-- Section 3: Footer. -->   
+<footer id="MobileFooter">&copy; 2016 Jeremy Marshall &bull; <a style="color:#FFFFFF" href="documents/JeremyMarshall_Resume_03_16.pdf" download="JeremyMarshall-Resume.pdf">Resume</a></footer>
+   
+   
+</div>  
+</body>
+
+<footer id="DesktopFooter"> &copy; 2016 Jeremy Marshall &bull; <a style="color:#FFFFFF" href="documents/JeremyMarshall_Resume_03_16.pdf" download="JeremyMarshall-Resume.pdf">Resume</a></footer>
+
+</html>
+

@@ -1,0 +1,337 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Marshall Experience - Home</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link href="styles/Home-About_Boilerplate.css" rel="stylesheet" type="text/css">
+<link href="styles/Home-About_FluidGrid.css" rel="stylesheet" type="text/css">
+
+<!-- Load Amimate.css -->
+<link rel="stylesheet" href="styles/animate.css"> 
+
+<!-- Load fancyBox.css -->
+<link rel="stylesheet" type="text/css" href="fancyBox/source/jquery.fancybox.css" media="screen"/>
+
+
+
+<style type="text/css">
+body {
+	margin: 0;
+	background-position: 99% 0%;
+}
+.gridContainer #TopBanner #Fade_Nav_Logo {
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	margin-top: 11px;
+	display:none;
+	z-index:2;
+}
+</style>
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script src="Scripts/respond.min.js"></script>
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+
+<script src="http://use.edgefonts.net/alfa-slab-one:n4:default;iceberg:n4:default;iceland:n4:default;lilita-one:n4:default;orbitron:n3:default;play:n4:default;poller-one:n4:default;viga:n4:default;volkhov:n4:default.js" type="text/javascript">
+</script>
+
+
+<!-- Load JQuery Library -->
+<script src="scripts/jquery-2.1.4.min.js"></script>
+
+<!-- Load JQuery.ZebraPin -->
+<script src="Zebra_Pin/public/javascript/zebra_pin.js"></script>
+
+<!-- Load jQuery.scrollSpeed 
+<script src="SmoothMouseScrolling/jQuery.scrollSpeed.js"></script> -->
+
+<!-- Load FancyBox.js -->
+<script src="fancyBox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ 
+<!-- Load WOW js -->
+<script src="WOW/dist/wow.min.js"></script>
+
+<!-- Load Animate.js -->
+<script src="animatescroll/animatescroll.js"></script>
+
+<!-- Initialize Wow.js -->
+<script> new WOW().init(); </script>
+
+
+<!-- JavaScript Function to Fade in the page after loading-->
+<script>
+		$(document).ready(function() {
+		  $('body').css('display', 'none');
+		  $('body').fadeIn(600);
+		  $('.link').click(function(event) {
+			event.preventDefault();
+			newLocation = $('.link a').attr("href");
+			$('body').fadeOut(600, newpage);
+		  });
+		  function newpage() {
+			window.location = newLocation;
+		  }
+		});	
+</script>
+
+<!-- Load fancyBox -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".various").fancybox({
+		fitToView	: true,
+		width		: '80%',
+		height		: '80%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+</script>
+
+<!-- Load Smoothwheel
+<script>
+$(function() {  
+	jQuery.scrollSpeed(100, 800);
+});
+</script> -->
+
+
+<!-- Zebra Sticky Banner
+<script type="text/javascript">
+$(document).ready(function() {
+	var
+	 
+		pin = new $.Zebra_Pin($('.Zebra'), {
+			top_spacing: 50,
+			contain: true
+		})
+});
+
+</script>-->
+
+</head>
+<body>
+<!-- -->
+
+ <!-- .gridcontainer holds the entire page-->          
+<div class="gridContainer">
+
+	<!-- Navigation for Each Page -->
+	<div id="TopBanner" class="fluid animate fadeInDown one">
+    
+		<div id="Navigation" class="fluid animate fadeInDown one">
+        
+            <div id="Center">
+                    <a href="portfolio.html">Portfolio</a> 
+                
+                    <a href="default.html"><img src="photos/JM_PenTool_Circle.png" alt="" width="70"></a>															    		
+                    <a href="contact.html">Contact</a>
+            </div>
+            
+        </div>
+        <div id="Fade_Nav_Logo"><a href="default.html"><img src="photos/JM_PenTool_Circle.png" alt="" width="70"></a></div>
+    </div>
+    
+<!-- Section 1: Top of page -->
+	<section id="Top">
+    
+    	<div class="Spacer"></div>
+    
+   		<div id="Intro">
+        
+            <div class="Mobile_Center">
+            	<div id="JMProfilePicDiv" class="fluid animate fadeIn two">
+                	<img src="photos/Home_About/AnimatedFace-EC2024.png" alt=""></div>															
+            </div>
+            
+            <div class="spacer"></div>
+            
+        	<div id="WelcomeTextDiv" class="fluid animate fadeIn two">
+                <h2>I'm  Jeremy <br> Marshall.</h2>
+                <div id="FriendlyNeighborhood">Your friendly neighborhood UX Designer.</div>
+            </div>
+            
+ 		</div>
+         
+        <div id="Top_EasyScroll" class="flex animate fadeInUp three">
+        	<a onclick="$('#DesignRepertoire').animatescroll();"><div id="Container">
+				Learn More <div id="Arrow"></div>
+        	</div></a>
+		</div>
+       
+   </section>
+  
+   
+   <!-- Section 2: MyBackground -->
+   <section id="DesignRepertoire">
+   		<div id="DR_Spacer"></div>
+   
+       <div id="DRTitle">
+           <h1 class="wow fadeIn">This is what I do.</h1>
+           <p class="wow fadeIn">And I love  every second of it.</p>
+       </div>  
+       
+       <div id="DRBox">
+       
+            <div id="ConditionalFlex">
+            
+               <div class="DR_ImageBoxes wow fadeInUp">
+                    <img src="photos/Home_About/DR_Prototyping.png" alt="" width="150">
+                    <h2>Designing</h2>
+                    <p>I use Adobe CC, Axure Pro, and Balamiq Mockups to bring my sketches to life by prototyping.</p>
+               </div>
+               
+               <div class="DR_ImageBoxes wow fadeInUp">
+                    <img src="photos/Home_About/DR_Testing.png" alt="" width="150">
+                    <h2>Testing</h2>
+                    <p>As a UX/UI Designer, I aim to create deliverables that are usable for target consumers. 
+                    I design, therefore I test.</p>
+               </div>
+               
+               <div class="DR_ImageBoxes wow fadeInUp">
+                    <img src="photos/Home_About/DR_Coding.png" alt="" width="150">
+                    <h2>Coding</h2>
+                    <p>I have a functional knowledge of HTML, CSS, and JavaScript. Fun fact: I coded this website.</p>
+               </div>
+               
+            </div>
+            
+        </div>
+        
+ 	</section>
+
+  
+<!-- Section 3: MyBackground -->
+  	<section id="MyBackground">
+   
+   		<div id="MyBackgroundSpacer"></div>
+  
+   		<div id="MBTitle">
+			<h1 class="wow fadeIn">My background</h1>
+   			<p class="wow fadeIn" style="width:90%; padding-right:5%; padding-left:5%;">is in engineering, video production, <br> and human&nbsp;factors&nbsp;psychology. Here's some of my experiences.</p>
+        </div>
+         
+        <div class="MB_LayeredBlocks">
+       
+            <div id="NoDispDesktop" class="Block_RT wow fadeInUp">
+            	<a class="various fancybox.iframe" href="https://www.youtube.com/embed/_IW5cPs4meI?autoplay=1">
+                	<div id="IceMan2"></div>
+                </a>
+            </div>
+       
+            <div class="Block_LT wow fadeInUp">
+                    <h3>The Ice-Man</h3>
+                    <p>The Ice-Man was a video made for Trend Micro's 2015 <a href="https://whatsyourstory.trendmicro.com/winners-list/"> 
+                    What's Your Story </a> video competition. For this project, I used Adobe Illustrator, After Effects, and Audition. I was 
+                    awarded a $1000 prize for my work.</p>
+            </div>
+            
+            <div class="MB_Spacer"></div>
+            
+            <div id="MB_HideMobile" class="Block_RT wow fadeInUp">
+            	<a class="various fancybox.iframe" href="https://www.youtube.com/embed/_IW5cPs4meI?autoplay=1?rel=0">
+                	<div id="IceMan"></div>
+                </a>
+            </div>
+       
+        </div>
+   
+        <div class="MB_LayeredBlocks">
+       
+            <div class="Block_RT wow fadeInUp">
+            	<a class="various fancybox.iframe" href="https://www.youtube.com/embed/u0iXw8RLDcU?autoplay=1?rel=0">
+                	<div id="PosBL"></div>
+                </a>
+       		</div>
+       
+            <div class="MB_Spacer"></div>
+       
+            <div class="Block_LT wow fadeInUp">
+                    <h3>Positive Body Language</h3>
+                    <p>During my time at RIT, I worked as a Community Advocate for RIT's Center for Residence Life. 
+                    Here's one of the talks I gave to my peers while at our annual RA conference in the Spring of 2014.</p>
+            </div> 
+                
+        </div>
+   
+        <div class="MB_LayeredBlocks">
+   
+            <div id="MB_HideDesktop" class="Block_RT wow fadeInUp">
+            	<a class="various fancybox.iframe" href="https://www.youtube.com/embed/T59d3GKvX8A?autoplay=1?rel=0">
+                	<div id="BiosensorMobile"></div>
+                </a> 
+            </div>
+       
+            <div class="Block_LT wow fadeInUp">
+                    <h3>Self-Powered Biosensors</h3>
+                    <p>While studying Aeronautical Engineering at Clarkson University, I spent my summers as an undergraduate researcher. 
+                    Here's a presentation I did in 2012 regarding my research from that summer at the Rochester Institute of Technology.</p>
+            </div>
+            
+            <div class="MB_Spacer"></div>
+            
+            <div id="MB_HideMobile2" class="Block_RT wow fadeInUp">
+            	<a class="various fancybox.iframe" href="https://www.youtube.com/embed/T59d3GKvX8A?autoplay=1">
+                	<div id="BiosensorDesktop"></div>
+                </a>
+            </div>
+   
+  		</div>
+		
+        <div style="height:200px; width:100%; display:flex; align-items:center; justify-content:center; flex-wrap:wrap;">
+        	<h3 class="animate wow fadeIn" style="width:100%; margin-bottom:-50px">Visit my portfolio for more.</h3>
+            <a href="portfolio.html" style="color:#559BC5">
+            <div class="animate wow zoomIn" style="
+            	height:50px; 
+                width:100px; 
+                border-radius:1px; 
+                border-color:#559BC5; 
+                border-style:solid;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-weight:bold;"><h3>Portfolio</h3></div>
+      		 </a>
+        
+        </div>
+       
+  	</section>
+   
+   	<footer id="MobileFooter">&copy; 2016 Jeremy Marshall &bull; <a style="color:#FFFFFF" href="documents/JeremyMarshall_Resume_03_16.pdf" download="JeremyMarshall-Resume.pdf">Resume</a></footer>
+   
+   
+</div>  
+</body>
+
+<footer id="DesktopFooter"> &copy; 2016 Jeremy Marshall &bull; <a style="color:#FFFFFF" href="documents/JeremyMarshall_Resume_03_16.pdf" download="JeremyMarshall-Resume.pdf">Resume</a></footer>
+
+</html>

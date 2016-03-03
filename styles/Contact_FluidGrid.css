@@ -1,0 +1,976 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.flex{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+/* Mobile Layout: 480px and below. */
+  
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100vw;
+	clear: none;
+	float: none;
+}
+.zeroMargin_mobile {
+margin-left: 0;
+}
+.hide_mobile {
+display: none;
+}
+#Navigation a {
+	font-weight: bolder;
+	text-decoration: none;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	color: inherit;
+}
+#TopBanner #Navigation p1 {
+	border-bottom: 2px solid #FF0004;
+	color: #FF0206;
+}
+
+/*=== Trigger  ===*/
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+/*=== Optional Delays, change values here  ===*/
+.one {
+-webkit-animation-delay: 0.4s;
+-moz-animation-delay: 0.4s;
+animation-delay: 0.4s;
+}
+ 
+.two {
+-webkit-animation-delay: .7s;
+-moz-animation-delay: .7s;
+animation-delay: .7s;
+}
+ 
+.three {
+-webkit-animation-delay: 1.3s;
+-moz-animation-delay: 1.3s;
+animation-delay: 1.3s;
+}
+ 
+.four {
+-webkit-animation-delay: 2s;
+-moz-animation-delay: 2s;
+animation-delay: 2s;
+}
+
+.five {
+-webkit-animation-delay: 2.7s;
+-moz-animation-delay: 2.7s;
+animation-delay: 2.7s;
+}
+
+.six {
+-webkit-animation-delay: 3.4s;
+-moz-animation-delay: 3.4s;
+animation-delay: 3.4s;
+}
+ 
+ 
+/*=== Animations start here  ===*/
+/*=== FADE IN  ===*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+ 
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+ 
+  to {
+    opacity: 1;
+  }
+}
+ 
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+ 
+ 
+/*=== FADE IN DOWN ===*/
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+ 
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+ 
+/*==== FADE IN UP ===*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+ 
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+ 
+/*=== FADE IN LEFT ===*/
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+ 
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+ 
+ 
+/*==== FADE IN RIGHT ===*/
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+ 
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width:300px) and (max-width:768px){
+.gridContainer {
+	max-width: 1920px;
+	overflow-x: no-display;
+	margin-top: 0px;
+	overflow-y: no-display;
+	width: 100%;
+	min-width: 300px;
+}
+#TopBanner {
+	z-index: 5;
+	background-image: -webkit-linear-gradient(270deg,rgba(7,118,185,0.70) 0%,rgba(7,118,185,0.70) 100%), url(../Photos/white.png);
+	background-image: -moz-linear-gradient(270deg,rgba(7,118,185,0.70) 0%,rgba(7,118,185,0.70) 100%), url(../Photos/white.png);
+	background-image: -o-linear-gradient(270deg,rgba(7,118,185,0.70) 0%,rgba(7,118,185,0.70) 100%), url(../Photos/white.png);
+	background-image: linear-gradient(180deg,rgba(7,118,185,0.70) 0%,rgba(7,118,185,0.70) 100%), url(../Photos/white.png);
+	height: 58px;
+	border-left-width: 4px;
+	border-right-width: 4px;
+	border-top-width: 4px;
+	position: fixed;
+	width: 100%;
+	min-width: 0px;
+
+
+}
+#Navigation {
+	width: 100%;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	background-color: rgba(255,255,255,1.00);
+	height: 35px;
+	vertical-align: middle;
+	line-height: 35px;
+	-webkit-box-shadow: 0px 1px 4px rgba(201,201,201,1.00);
+	box-shadow: 0px 1px 4px rgba(201,201,201,1.00);
+	color: #559BC5;
+	margin-top: 30px;
+	text-align: center;
+	word-spacing: 3em;
+	
+}
+#Navigation #Center {
+	Display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#TopBanner #Navigation a {
+	line-height: 39px;
+	vertical-align: top;
+	width: 120px;
+}
+#Navigation a img {
+	-webkit-box-shadow: 1px 0px #FFFFFF;
+	box-shadow: 1px 0px #FFFFFF;
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+	border: 0px solid #FF0004;
+}
+.zeroMargin_desktop {
+	margin-left: 0;
+}
+#DesktopFooter {
+	text-align: center;
+	width: 100%;
+	height: 25px;
+	line-height: 34px;
+	color: #FFFFFF;
+	background-color: #559BC5;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	vertical-align: text-bottom;
+	padding-top: 12px;
+	font-weight: normal;
+	padding-bottom: 16px;
+}
+#MobileFooter {
+	display: none;
+}
+#RedLogo {
+	position: absolute;
+	z-index: 0;
+	margin-left: -13px;
+	margin-top: -39px;
+}
+#BlueLogo {
+	position: absolute;
+	z-index: 1;
+	margin-top: -39px;
+	margin-left: -13px;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+#LogoContainer {
+	position: static;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70px;
+}
+.RedText {
+	color: #FF0004;
+}
+#S1-IntroBanner {
+	background-image: -webkit-linear-gradient(270deg,rgba(14,105,159,0.15) 0%,rgba(14,105,159,0.80) 90.16%), url(../photos/Contact_Page/NYC_Lights.jpg);
+	background-image: -moz-linear-gradient(270deg,rgba(14,105,159,0.15) 0%,rgba(14,105,159,0.80) 90.16%), url(../photos/Contact_Page/NYC_Lights.jpg);
+	background-image: -o-linear-gradient(270deg,rgba(85,155,197,0.80) 0%,rgba(85,155,197,0.80) 59.58%,rgba(85,155,197,1.00) 100%), url(../photos/Contact_Page/NYC_Lights.jpeg);
+	background-image: -o-linear-gradient(270deg,rgba(14,105,159,0.15) 0%,rgba(14,105,159,0.80) 90.16%), url(../photos/Contact_Page/NYC_Lights.jpg);
+	width: 100%;
+	height: 477px;
+	background-position: 0% 40%;
+	font-size: medium;
+	background-image: linear-gradient(180deg,rgba(14,105,159,0.15) 0%,rgba(14,105,159,0.80) 90.16%), url(../photos/Contact_Page/NYC_Lights.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#S1-IntroBanner #S1-Spacer1 {
+	margin-top: 0px;
+	height: 322px;
+}
+#S1-IntroBanner #BannerTitle {
+	color: #FFFFFF;
+	font-size: 220%;
+	width: 100%;
+	text-align: center;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+#S1-IntroBanner #Subtitle {
+	text-align: center;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	font-size: 110%;
+}
+#ProjectsDisplay {
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255,255,255,0.10);
+	padding-top: 25px;
+	padding-bottom: 25px;
+	min-height: 550px;
+}
+#ProjectsDisplay .Project .P_L1 {
+	width: 100%;
+	height: 90%;
+	margin-top: 70px;
+	text-align: center;
+	max-width: 450px;
+	-webkit-transition: all .3s ease-in-out 0s;
+	-o-transition: all .3s ease-in-out 0s;
+	transition: all .3s ease-in-out 0s;
+}
+#ProjectsDisplay .Project #AH {
+
+}
+#ProjectsDisplay .Project #SH {
+
+
+}
+#ProjectsDisplay .Project .P_L2 {
+	height: 50px;
+	margin-top: 20px;
+	margin-bottom: 70px;
+	border: 2px solid #559BC5;
+	-webkit-box-shadow: 0.05em 0.05em 0.05em;
+	box-shadow: 0.05em 0.05em 0.05em;
+	width: 80%;
+	max-width: 300px;
+}
+#ProjectsDisplay .Project h1 {
+	color: rgba(14,105,159,1.00);
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 19px;
+	text-align: center;
+	margin-top: 23px;
+	font-weight: normal;
+}
+#ProjectsDisplay .Project {
+	Display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.Project .P_L2 h2 {
+	margin-top: 15px;
+	color: #559BC5;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+#DesignProcessDesc {
+	width: 100%;
+	height: 10%;
+	background-color: rgba(85,155,197,0.20);
+	text-align: center;
+	color: rgba(14,105,159,1.00);
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 110%;
+}
+#DesignProcessDesc p {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 15px;
+	margin-top: -3px;
+}
+#TME img {
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	width: 70%;
+}
+#AH img {
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	width: 70%;
+}
+#SH img {
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	width: 70%;
+}
+
+#Form_Container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	text-align: center;
+	margin-top: 69px;
+	margin-bottom: 19px;
+}
+.gridContainer.P_L1 #Form_Container form {
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 90%;
+}
+#Form_Container form .Bars {
+	width: 100%;
+	text-align: left;
+	margin-bottom: 26px;
+	color: #0E699F;
+
+
+}
+form .Bars #Name {
+	width: 95%;
+	height: 45px;
+}
+form .Bars #Company {
+	width: 95%;
+	height: 45px;
+}
+form .Bars #email {
+	width: 95%;
+	height: 45px;
+}
+
+form .Bars #Tel {
+	width: 95%;
+	height: 45px;
+}
+#FormMessage {
+	width: 100%;
+	text-align: left;
+	color: #0E699F;
+
+}
+
+#FormMessage #Message {
+	width: 94.5%;
+	height: 250px;
+
+}
+#FormSubmit {
+	width: 100%;
+	text-align: left;
+	margin-top: 26px;
+	margin-bottom: 26px;
+}
+
+#DesktopFooter {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	max-width: 1920px;
+	overflow-x: no-display;
+	margin-top: 0px;
+	overflow-y: no-display;
+	width: 100%;
+}
+
+#TopBanner {
+	z-index: 5;
+	background-image: -webkit-linear-gradient(270deg,rgba(7,118,185,0.70) 0%,rgba(7,118,185,0.70) 100%), url(../Photos/white.png);
+	background-image: -moz-linear-gradient(270deg,rgba(7,118,185,0.70) 0%,rgba(7,118,185,0.70) 100%), url(../Photos/white.png);
+	background-image: -o-linear-gradient(270deg,rgba(7,118,185,0.70) 0%,rgba(7,118,185,0.70) 100%), url(../Photos/white.png);
+	background-image: linear-gradient(180deg,rgba(7,118,185,0.70) 0%,rgba(7,118,185,0.70) 100%), url(../Photos/white.png);
+	height: 58px;
+	border-left-width: 4px;
+	border-right-width: 4px;
+	border-top-width: 4px;
+	position: fixed;
+	width: 100%;
+	min-width: 0px;
+
+
+}
+#Navigation {
+	width: 100%;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	background-color: rgba(255,255,255,1.00);
+	height: 35px;
+	vertical-align: middle;
+	line-height: 35px;
+	-webkit-box-shadow: 0px 1px 4px rgba(201,201,201,1.00);
+	box-shadow: 0px 1px 4px rgba(201,201,201,1.00);
+	color: #559BC5;
+	margin-top: 30px;
+	text-align: center;
+	word-spacing: 3em;
+	
+}
+#Navigation #Center {
+	Display: flex;
+	align-items:center;
+	justify-content:center;
+}
+
+#TopBanner #Navigation a {
+	line-height: 39px;
+	vertical-align: top;
+	width: 120px;
+}
+#Navigation a img {
+	-webkit-box-shadow: 1px 0 #FFFFFF;
+	box-shadow: 1px 0 #FFFFFF;
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+}
+
+
+.zeroMargin_desktop {
+	margin-left: 0;
+}
+#DesktopFooter {
+	text-align: center;
+	width: 100%;
+	height: 25px;
+	line-height: 34px;
+	color: #FFFFFF;
+	background-color: #559BC5;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	vertical-align: text-bottom;
+	padding-top: 12px;
+	font-weight: normal;
+	padding-bottom: 16px;
+}
+#MobileFooter {
+	display: none;
+}
+#RedLogo {
+	position: absolute;
+	z-index: 0;
+	margin-left: -13px;
+	margin-top: -39px;
+}
+#BlueLogo   {
+	position: absolute;
+	z-index: 1;
+	margin-top: -39px;
+	margin-left: -13px;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+#LogoContainer   {
+	position: static;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70px;
+}
+.RedText {
+	color: #FF0004;
+}
+#S1-IntroBanner {
+	background-image: -webkit-linear-gradient(270deg,rgba(85,155,197,0.80) 0%,rgba(85,155,197,0.80) 59.58%,rgba(85,155,197,1.00) 100%), url(../photos/Contact_Page/NYC_Lights.jpg);
+	background-image: -moz-linear-gradient(270deg,rgba(85,155,197,0.80) 0%,rgba(85,155,197,0.80) 59.58%,rgba(85,155,197,1.00) 100%), url(../photos/Contact_Page/NYC_Lights.jpg);
+	background-image: -o-linear-gradient(270deg,rgba(85,155,197,0.80) 0%,rgba(85,155,197,0.80) 59.58%,rgba(85,155,197,1.00) 100%), url(../photos/Contact_Page/NYC_Lights.jpg);
+	background-image: linear-gradient(180deg,rgba(85,155,197,0.80) 0%,rgba(85,155,197,0.80) 59.58%,rgba(85,155,197,1.00) 100%), url(../photos/Contact_Page/NYC_Lights.jpg);
+	width: 100%;
+	height: 477px;
+	font-size: medium;
+	background-size: cover;
+	background-position: 0% 40%;
+} 
+#S1-IntroBanner #S1-Spacer1 {
+	margin-top: 0px;
+	height: 322px;
+}
+
+
+#S1-IntroBanner #BannerTitle {
+	color: #FFFFFF;
+	font-size: 400%;
+	width: 100%;
+	text-align: center;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+#S1-IntroBanner #Subtitle {
+	text-align: center;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	font-size: 110%;
+}
+#ProjectsDisplay {
+	Display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255,255,255,0.10);
+	padding-top: 25px;
+	padding-bottom: 25px;
+	min-height: 550px;
+}
+#ProjectsDisplay .Project .P_L1 {
+	width: 100%;
+	height: 90%;
+	margin-top: 70px;
+	text-align: center;
+	max-width: 500px;
+	-webkit-transition: all .3s ease-in-out 0s;
+	-o-transition: all .3s ease-in-out 0s;
+	transition: all .3s ease-in-out 0s;
+}
+#ProjectsDisplay .Project #AH {
+}
+#ProjectsDisplay .Project #SH {
+
+}
+
+
+
+#ProjectsDisplay .Project .P_L2 {
+	height: 50px;
+	margin-top: 20px;
+	margin-bottom: 70px;
+	border: 2px solid #559BC5;
+	-webkit-box-shadow: 0.05em 0.05em 0.05em;
+	box-shadow: 0.05em 0.05em 0.05em;
+	width: 80%;
+	max-width: 300px;
+}
+#ProjectsDisplay .Project h1 {
+	color: rgba(14,105,159,1.00);
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 19px;
+	text-align: center;
+	margin-top: 23px;
+	font-weight: normal;
+}
+
+
+
+#ProjectsDisplay .Project {
+	Display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.Project .P_L2 h2 {
+	margin-top: 15px;
+	color: #559BC5;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+#DesignProcessDesc  {
+	width: 100%;
+	height: 100px;
+	background-color: rgba(85,155,197,0.20);
+	text-align: center;
+	color: rgba(14,105,159,1.00);
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 110%;
+}
+#DesignProcessDesc p {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 15px;
+	margin-top: -3px;
+}
+#TME img {
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	width: 70%;
+}
+#AH img {
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	width: 70%;
+}
+#SH img {
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	width: 70%;
+}
+
+
+#Form_Container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	text-align: center;
+	margin-top: 69px;
+	margin-bottom: 19px;
+}
+.gridContainer.P_L1 #Form_Container form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 800px;
+	padding-left: 7.5%;
+	padding-right: 5%;
+}
+#Form_Container form .Bars {
+	width: 50%;
+	text-align: left;
+	margin-bottom: 26px;
+	color: #0E699F;
+
+
+}
+form .Bars #Name {
+	width: 90%;
+	height: 45px;
+}
+form .Bars #Company {
+	width: 90%;
+	height: 45px;
+}
+form .Bars #email {
+	width: 90%;
+	height: 45px;
+}
+
+form .Bars input {
+	height: 45px;
+}
+form .Bars #Tel {
+	width: 90%;
+	height: 45px;
+}
+#FormMessage {
+	width: 100%;
+	text-align: left;
+	color: #0E699F;
+
+}
+
+#FormMessage #Message {
+	width: 94.5%;
+	height: 250px;
+
+}
+#FormSubmit {
+	width: 100%;
+	text-align: left;
+	margin-top: 26px;
+	margin-bottom: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#DesktopFooter {
+}
+
+
+
+
+}
+p3 {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #393939;
+	font-size: 16px;
+	font-weight: 100;
+}
+
+#Navigation a:hover {
+	color: #FF0004;
+}
+#TME_Org a:hover {
+	color: #FF0004;
+}
+#Intro .Mobile_Center:hover {
+	-webkit-opacity: 0%;
+	opacity: 0%;
+}
+#BlueLogo:hover {
+	-webkit-opacity: 0;
+	opacity: 0;
+}
+#TME img:hover {
+	width: 75%;
+}
+#AH img:hover {
+	width: 75%;
+}
+#SH img:hover {
+	width: 75%;
+}

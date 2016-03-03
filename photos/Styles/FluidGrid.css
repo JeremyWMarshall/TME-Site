@@ -1,0 +1,265 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	15;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+/* Mobile Layout: 480px and below. */
+  
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 88.0326%;
+	padding-left: 1.4836%;
+	padding-right: 1.4836%;
+	clear: none;
+	float: none;
+}
+#Nav {
+	width: 100%;
+	margin-left: 0;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	word-spacing: 1em;
+	text-align: center;
+	color: #7F7F7F;
+	clear: both;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	vertical-align: text-bottom;
+}
+#IMG {
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-left: 0;
+}
+#Line {
+}
+#T2 {
+width: 100%;
+margin-left: 0;
+}
+#T2 img {
+	display: inline;
+}
+
+#TextParagraph {
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+	display: inline;
+}
+#T2 h1 {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	display: inline;
+}
+#T2 p {
+
+
+}
+
+#ImgDiv {
+width: 100%;
+margin-left: 0;
+}
+
+#MobileLine {
+}
+
+.zeroMargin_mobile {
+margin-left: 0;
+}
+
+.hide_mobile {
+display: none;
+}
+
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+
+.gridContainer {
+	width: 91.4836%;
+	padding-left: 0.7581%;
+	padding-right: 0.7581%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+
+#Nav {
+	width: 100%;
+	margin-left: 0;
+	word-spacing: 6em;
+}
+#IMG {
+	width: 74.5856%;
+	margin-top: 1em;
+	margin-left: 12.7071%;
+}
+#Line {
+	background-color: #C5C5C5;
+	height: 1px;
+	min-width: 0px;
+}
+#T2 {
+width: 100%;
+margin-left: 0;
+}
+#TextParagraph {
+	width: 100%;
+	margin-left: 1.6574%;
+	clear: none;
+}
+#ImgDiv {
+	width: 40%;
+	margin-left: 30%;
+}
+#MobileLine {
+	display: none;
+}
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 93.9673%;
+	max-width: 1232px;
+	padding-left: 0.5163%;
+	padding-right: 0.5163%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#Nav {
+	width: 400px;
+	margin-top: 7.em;
+	margin-top: 11.5%;
+	text-align: center;
+	padding-bottom: 0px;
+	vertical-align: text-top;
+	padding-top: 4px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	clear: right;
+	float: right;
+	word-spacing: 2.5em;
+}
+#IMG {
+	width: 41.0256%;
+	margin-left: 0px;
+	margin-right: 0px;
+	display: table-cell;
+}
+#IMG img {
+	display: block;
+	float: right;
+	margin-right: 40%;
+
+
+
+}
+#Line {
+}
+#T2 {
+width: 83.1501%;
+margin-left: 8.4249%;
+}
+#T2 img {
+	width: 100%;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#TextParagraph {
+	width: 49.3392%;
+	clear: none;
+	margin-left: 1.3215%;
+	margin-top: 15%;
+}
+#ImgDiv {
+width: 49.3392%;
+margin-left: 0;
+}
+#MobileLine {
+	display: none;
+}
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+}
+
+
+}
+
+@media (min-width: 310px){
+#IMG {
+	margin-top: 10px;
+}
+#IMG img {
+	width: 60%;
+	margin-left: 20%;
+}
+
+#Nav {
+	word-spacing: 3em;
+}
+#MobileLine {
+	width: 100%;
+	background-color: #CDCDCD;
+	height: 1px;
+}
+
+
+
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Marshall Experience - Home</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link href="Styles/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="Styles/FluidGrid.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
+	background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 11.39%,rgba(255,255,255,0.50) 18.65%,rgba(255,255,255,0.50) 40.93%,rgba(255,255,255,1.00) 59.58%,rgba(255,255,255,1.00) 100%), url(Photos/Portfolio_Page/Portfolio%20Page.jpg);
+	background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 11.39%,rgba(255,255,255,0.50) 18.65%,rgba(255,255,255,0.50) 40.93%,rgba(255,255,255,1.00) 59.58%,rgba(255,255,255,1.00) 100%), url(Photos/Portfolio_Page/Portfolio%20Page.jpg);
+	background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 11.39%,rgba(255,255,255,0.50) 18.65%,rgba(255,255,255,0.50) 40.93%,rgba(255,255,255,1.00) 59.58%,rgba(255,255,255,1.00) 100%), url(Photos/Portfolio_Page/Portfolio%20Page.jpg);
+	background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 11.39%,rgba(255,255,255,0.50) 18.65%,rgba(255,255,255,0.50) 40.93%,rgba(255,255,255,1.00) 59.58%,rgba(255,255,255,1.00) 100%), url(Photos/Portfolio_Page/Portfolio%20Page.jpg);
+	background-size: contain;
+	background-position: 0% 15%;
+}
+</style>
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="Scripts/respond.min.js"></script>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/alfa-slab-one:n4:default;iceberg:n4:default;iceland:n4:default;lilita-one:n4:default;orbitron:n3:default;play:n4:default;poller-one:n4:default;viga:n4:default;volkhov:n4:default.js" type="text/javascript"></script>
+
+<script>
+		$(document).ready(function() {
+		  $('body').css('display', 'none');
+		  $('body').fadeIn(700);
+		  $('.link').click(function(event) {
+			event.preventDefault();
+			newLocation = $('.link a').attr("href");
+			$('body').fadeOut(700, newpage);
+		  });
+		  function newpage() {
+			window.location = newLocation;
+		  }
+		});	
+</script>
+
+</head>
+<body>
+<!-- Sitewide page navigation/top banner, page slogan rule/secondBanner_Rule, and bottomrule. -->
+			<div id="Rule" class="fluid"></div>
+            
+            <div id="SecondBanner_Rule" class="fluid"></div>
+    
+            
+<div class="gridContainer clearfix">
+
+	  	<div id="TopBanner" class="fluid">
+        
+	   		 <div id="JMPenToolDiv" class="fluid ">
+             	<a href="default.html">
+                <img src="Photos/Jeremy Marshall Pen Tool Logov2.png" alt="" width="200"></a>
+             </div>
+             
+	    	 <div id="Navigation" class="fluid ">
+             	<a href="default.html">HOME</a>
+                <a href="about.html">ABOUT</a> 
+                <p1><a href="portfolio.html">PORTFOLIO</a></p1> 
+             	<a href="contact.html">CONTACT</a>
+             </div>
+              
+      	</div>
+     		
+        
+<!-- Text for page slogan. -->
+	<div id="PageSlogan_Default" class="fluid">
+    	<h1>Designing.</h1> 
+    	<p> It's one of my favorite things.</p>
+    </div>
+   
+<!-- Content for each distinct page; this one is Default.html.-->
+            
+      <div id="Page_Content" class="fluid">
+      
+      <div id="Page_Title" class="fluid">Current Design Projects:</div> 
+      
+      
+      	<div id="Proj_1-Title" class="fluid">
+           		After High School<br><span class="subtext">A mobile app designed to help high school students find their career path.</span>
+        </div>
+      
+      
+        <div id="Project_1" class="container">
+        
+                <div class="left">
+                	<div id="DP1"><span class="Center">Process</span></div></div>
+                                
+                <div class="left">
+                    <div id="UT1"><span class="Center">Testing</span></div></div>
+                    
+                <div class="left">
+                    <div id="FP1"><span class="Center">Product</span></div></div>    
+        </div>
+       
+           
+    <div id="Proj_2-Title" class="fluid">
+           		The Marshall Experience<br><span class="subtext">My responsive portfolio site.</span>
+        </div>
+       
+       <div id="Project_2" class="container">
+                <div class="left">
+                    <div id="DP2"> <span class="Center">Process</span></div></div>
+                    
+                <div class="left">
+                    <div id="FP2"><span class="Center">Product</span></div></div>
+                    
+                       
+		</div>
+            
+
+    </div>  
+</div>  
+</body>
+<div id="Footer" class="fluid">
+<div id="BottomRule" class="fluid"></div>
+<div id="TME_Org" class="fluid"><a href="default.html">TheMarshallExperience.org </a><br>
+			Copyright 2016 | No pixels were harmed in the creation of this site.</div>
+</div>
+</html>

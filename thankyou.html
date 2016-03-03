@@ -1,0 +1,115 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Marshall Experience - Contact</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link href="styles/Contact_FluidGrid.css" rel="stylesheet" type="text/css">
+<link href="styles/Contact_Boilerplate.css" rel="stylesheet" type="text/css">
+
+<!-- Load Amimate.css -->
+<link rel="stylesheet" href="styles/animate.css"> 
+
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script src="Scripts/respond.min.js"></script>
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+
+<script src="http://use.edgefonts.net/alfa-slab-one:n4:default;iceberg:n4:default;iceland:n4:default;lilita-one:n4:default;orbitron:n3:default;play:n4:default;poller-one:n4:default;viga:n4:default;volkhov:n4:default.js" type="text/javascript">
+</script>
+
+
+<!-- Load JQuery Library -->
+<script src="scripts/jquery-2.1.4.min.js"></script>
+ 
+<!-- Load WOW js -->
+<script src="WOW/dist/wow.min.js"></script>
+
+<!-- Load Animate.js -->
+<script src="animatescroll/animatescroll.js"></script>
+
+<!-- Initialize Wow.js -->
+<script> new WOW().init(); </script>
+
+
+<!-- JavaScript Function to Fade in the page after loading-->
+<script>
+		$(document).ready(function() {
+		  $('body').css('display', 'none');
+		  $('body').fadeIn(600);
+		  $('.link').click(function(event) {
+			event.preventDefault();
+			newLocation = $('.link a').attr("href");
+			$('body').fadeOut(600, newpage);
+		  });
+		  function newpage() {
+			window.location = newLocation;
+		  }
+		});	
+</script>
+
+</head>
+<body>
+<!-- -->
+
+ <!-- .gridcontainer holds the entire page-->          
+<div class="gridContainer P_L1">
+
+	<!-- Navigation for Each Page -->
+	<div id="TopBanner" class="fluid animate fadeInDown one">
+    		<div id="Navigation" class="fluid animate fadeInDown one">
+                <div id="Center">
+                    <a href="portfolio.html">Portfolio</a> 
+                
+                    <a href="default.html">
+                        <div id="LogoContainer">
+                          <div id="RedLogo"><img src="photos/Portfolio_Page/JM_PenTool_Circle.png" alt="" width="70"></div>
+                          <div id="BlueLogo"><img src="photos/Portfolio_Page/JM_PenTool_Circle-Blue.png" alt="" width="70"></div>
+                        </div>
+                    </a>
+                                                                                            
+                    <a href="contact.html"><span class="RedText">Contact</span></a>
+                </div>
+        	</div>
+    </div>
+    
+    
+    
+<!-- Section 1: Introductory banner. -->
+
+
+  <div id="S1-IntroBanner" style="height:100vh">
+        <div id="S1-Spacer1"></div>
+        <div id="BannerTitle" class="animate fadeInUp one">Thank You.</div>
+        <div id="Subtitle" class="animate fadeIn two"> <strong>Your message has been sent.</strong></div>
+    </div>
+<footer id="MobileFooter">&copy; 2016 Jeremy Marshall &bull; <a style="color:#FFFFFF" href="documents/JeremyMarshall_Resume_03_16.pdf" download="JeremyMarshall-Resume.pdf">Resume</a></footer>
+   
+   
+</div> 
+</body>
+
+<footer id="DesktopFooter"> &copy; 2016 Jeremy Marshall &bull; <a style="color:#FFFFFF" href="documents/JeremyMarshall_Resume_03_16.pdf" download="JeremyMarshall-Resume.pdf">Resume</a></footer>
+
+</html>
+
